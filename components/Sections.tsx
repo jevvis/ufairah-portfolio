@@ -983,7 +983,6 @@ export function EducationSection() {
       imageTag: t('education.1.tag'),
       imageCaption: t('education.1.caption'),
       highlights: [
-        t('education.1.h1'),
         t('education.1.h2'),
         t('education.1.h3'),
         t('education.1.h4'),
@@ -1160,6 +1159,122 @@ export function EducationSection() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export function PrestasiSection() {
+  const { t } = useLanguage()
+  const chips = [t('achv.1.detail'), t('achv.1.period'), `${t('about.ipk')} 4.00/4.00`]
+
+  return (
+    <section id="achievements" className="relative py-24 px-4 md:px-8 overflow-hidden font-sans">
+      {/* Background Waves */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.1] z-0">
+        <svg className="w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="none" fill="none" stroke="currentColor">
+          <path d="M0 200C300 100 400 300 720 200C1040 100 1140 300 1440 200" strokeWidth="2" />
+          <path d="M0 400C300 300 400 500 720 400C1040 300 1140 500 1440 400" strokeWidth="2" />
+          <path d="M0 600C300 500 400 700 720 600C1040 500 1140 700 1440 600" strokeWidth="2" />
+        </svg>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="mb-12 md:mb-16">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-[var(--muted)] mb-4 font-semibold">{t('achv.label')}</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <TypewriterTitle text={t('achv.title')} />
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-8 md:gap-10">
+          {/* Prestasi utama: Lulusan Terbaik 1 */}
+          <div className="bg-[var(--card-bg)] border border-[var(--card-border)] hover:border-[var(--muted)] rounded-3xl p-6 sm:p-8 md:p-10 transition-all duration-300 shadow-sm hover:shadow-xl">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+              <div className="w-full lg:w-7/12 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30 text-3xl font-black shrink-0">1</div>
+                    <span className="text-[10px] tracking-[0.3em] uppercase text-emerald-500 font-semibold">{t('achv.1.badge')}</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">{t('achv.1.title')}</h3>
+                  <p className="text-sm md:text-base font-semibold text-[var(--muted)] mb-6">{t('achv.1.inst')}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {chips.map((c) => (
+                      <span key={c} className="px-3 py-1.5 rounded-full bg-[var(--background)] border border-[var(--card-border)] text-xs font-semibold text-[var(--foreground)]">
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <a
+                  href="/projects/sertifikat-lulusan-terbaik.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex items-center gap-2 self-start px-5 py-2.5 rounded-full bg-[var(--foreground)] text-[var(--background)] text-sm font-medium hover:opacity-90 transition-opacity"
+                >
+                  {t('achv.viewCert')}
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+              </div>
+              <div className="w-full lg:w-5/12">
+                <a
+                  href="/projects/sertifikat-lulusan-terbaik.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-[var(--card-border)] shadow-md bg-white"
+                >
+                  <img
+                    src="/projects/sertifikat-lulusan-terbaik.jpg"
+                    alt={t('achv.1.title')}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Kegiatan kedua sesuai CV: Ketua Pelaksana Sosialisasi Pencegahan Stunting */}
+          <div className="bg-[var(--card-bg)] border border-[var(--card-border)] hover:border-[var(--muted)] rounded-3xl p-6 sm:p-8 md:p-10 transition-all duration-300 shadow-sm hover:shadow-xl">
+            <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-stretch">
+              <div className="w-full lg:w-7/12 flex flex-col justify-center">
+                <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                  <span className="text-[10px] tracking-[0.3em] uppercase text-emerald-500 font-semibold">{t('achv.2.label')} • {t('achv.2.inst')}</span>
+                  <span className="text-[10px] tracking-wider px-2.5 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-500 font-medium">{t('achv.2.period')}</span>
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-4">{t('achv.2.role')}</h3>
+                <ul className="space-y-2.5">
+                  {[t('achv.2.b1'), t('achv.2.b2')].map((b) => (
+                    <li key={b} className="flex items-start gap-2.5 text-sm text-[var(--muted)] leading-relaxed">
+                      <svg className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="w-full lg:w-5/12">
+                <a
+                  href="/projects/stunting-sosialisasi.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-[var(--card-border)] shadow-md bg-white"
+                >
+                  <img
+                    src="/projects/stunting-sosialisasi.jpg"
+                    alt={t('achv.2.role')}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

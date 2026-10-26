@@ -11,6 +11,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.education': 'PENDIDIKAN',
     'nav.work': 'MAGANG',
     'nav.org': 'ORGANISASI',
+    'nav.achievements': "PRESTASI",
     'nav.awards': 'SERTIFIKASI',
     'nav.skills': 'KEAHLIAN',
     'nav.contact': 'HUBUNGI SAYA',
@@ -94,7 +95,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'education.1.desc': "Program Profesi Apoteker di Universitas Borneo Lestari dengan IPK 4.00/4.00. Memiliki pengalaman magang di industri farmasi, rumah sakit, distribusi obat, puskesmas, dan apotek. Lulusan Terbaik 1 Program Studi Pendidikan Profesi Apoteker, Fakultas Farmasi UBL.",
     'education.1.tag': 'Pendidikan Profesi',
     'education.1.caption': 'Pengambilan Sumpah Apoteker Periode XIII',
-    'education.1.h1': 'Lulusan Terbaik 1 Program Studi Pendidikan Profesi Apoteker, Fakultas Farmasi UBL (Angkat Sumpah Apoteker Periode XIII, Oktober 2026)',
     'education.1.h2': "Pengalaman magang di industri farmasi, rumah sakit, PBF, puskesmas, dan apotek",
     'education.1.h3': 'Lulus uji kompetensi dan memperoleh Sertifikat Kompetensi Apoteker dari Kolegium Farmasi Indonesia',
     'education.1.h4': 'Analisis kasus pasien dengan metode SOAP untuk mengidentifikasi Drug-Related Problems (DRP) di RSUD Ulin',
@@ -177,6 +177,37 @@ export const translations: Record<Language, Record<string, string>> = {
     'org.2.period': 'Oktober 2023',
     'org.2.loc': 'Universitas Borneo Lestari',
     'org.2.desc': 'Mengoordinasikan persiapan dan pelaksanaan kegiatan sosialisasi bertema "Implementasi Generasi Remaja Mencegah Stunting" serta mendukung penyampaian edukasi mengenai pencegahan stunting kepada remaja.',
+
+    // ── Prestasi & Pencapaian
+
+    'achv.label': "PRESTASI & PENCAPAIAN",
+
+    'achv.title': "Prestasi & Pencapaian",
+
+    'achv.1.badge': "LULUSAN TERBAIK 1",
+
+    'achv.1.title': "Lulusan Terbaik 1 Program Studi Pendidikan Profesi Apoteker",
+
+    'achv.1.inst': "Fakultas Farmasi Universitas Borneo Lestari",
+
+    'achv.1.detail': "Angkat Sumpah Apoteker Periode XIII",
+
+    'achv.1.period': "Oktober 2026",
+
+    'achv.viewCert': "Lihat Sertifikat",
+
+    'achv.2.label': "KEGIATAN",
+
+    'achv.2.inst': "Universitas Borneo Lestari",
+
+    'achv.2.role': "Ketua Pelaksana Sosialisasi Pencegahan Stunting",
+
+    'achv.2.period': "Oktober 2023",
+
+    'achv.2.b1': "Mengoordinasikan persiapan dan pelaksanaan kegiatan sosialisasi bertema \"Implementasi Generasi Remaja Mencegah Stunting\".",
+
+    'achv.2.b2': "Mendukung penyampaian edukasi mengenai pencegahan stunting kepada remaja melalui kegiatan sosialisasi.",
+
 
     // ── Awards Section
     'awards.label': "SERTIFIKAT, PRESTASI & PELATIHAN",
@@ -274,6 +305,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.education': 'EDUCATION',
     'nav.work': 'INTERNSHIP',
     'nav.org': 'ORGANIZATION',
+    'nav.achievements': "ACHIEVEMENTS",
     'nav.awards': 'CERTIFICATIONS',
     'nav.skills': 'SKILLS',
     'nav.contact': 'CONTACT ME',
@@ -357,7 +389,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'education.1.desc': "Pharmacist Professional Program at Universitas Borneo Lestari with a 4.00/4.00 GPA. Internship experience in the pharmaceutical industry, hospitals, drug distribution, community health centers, and pharmacies. Top Graduate 1 of the Pharmacist Professional Education Study Program, Faculty of Pharmacy UBL.",
     'education.1.tag': 'Professional Education',
     'education.1.caption': 'Pharmacist Oath-Taking Ceremony, Period XIII',
-    'education.1.h1': 'Top Graduate 1 of the Pharmacist Professional Education Program, Faculty of Pharmacy UBL (Pharmacist Oath Period XIII, October 2026)',
     'education.1.h2': "Internships in the pharmaceutical industry, hospital, distributor, health center, and pharmacy",
     'education.1.h3': 'Passed the competency exam and earned the Pharmacist Competency Certificate from the Indonesian College of Pharmacy',
     'education.1.h4': 'Analyzed patient cases with the SOAP method to identify Drug-Related Problems (DRP) at RSUD Ulin',
@@ -440,6 +471,37 @@ export const translations: Record<Language, Record<string, string>> = {
     'org.2.period': 'October 2023',
     'org.2.loc': 'Universitas Borneo Lestari',
     'org.2.desc': 'Coordinated preparation and delivery of the outreach themed "Implementing Youth Generation to Prevent Stunting" and supported education on stunting prevention for teenagers.',
+
+    // ── Prestasi & Pencapaian
+
+    'achv.label': "ACHIEVEMENTS",
+
+    'achv.title': "Achievements",
+
+    'achv.1.badge': "TOP GRADUATE 1",
+
+    'achv.1.title': "Top Graduate 1 of the Pharmacist Professional Education Study Program",
+
+    'achv.1.inst': "Faculty of Pharmacy, Universitas Borneo Lestari",
+
+    'achv.1.detail': "Pharmacist Oath, Period XIII",
+
+    'achv.1.period': "October 2026",
+
+    'achv.viewCert': "View Certificate",
+
+    'achv.2.label': "ACTIVITY",
+
+    'achv.2.inst': "Universitas Borneo Lestari",
+
+    'achv.2.role': "Chairperson of the Stunting Prevention Outreach",
+
+    'achv.2.period': "October 2023",
+
+    'achv.2.b1': "Coordinated the preparation and delivery of an outreach themed \"Implementing Youth Generation to Prevent Stunting\".",
+
+    'achv.2.b2': "Supported education on stunting prevention for teenagers through the outreach.",
+
 
     // ── Awards Section
     'awards.label': 'CERTIFICATES, ACHIEVEMENTS & TRAINING',
