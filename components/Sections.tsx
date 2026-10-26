@@ -406,9 +406,20 @@ export function MesoLogo({ className = 'w-7 h-7' }: { className?: string }) {
 
 export function PptLogo({ className = 'w-7 h-7' }: { className?: string }) {
   return (
-    <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-      <rect x="4" y="4" width="40" height="40" rx="9" fill="#D24726" />
-      <path d="M17 13h9.5a7 7 0 0 1 0 14H22v8h-5V13zm5 4.6v4.8h4a2.4 2.4 0 0 0 0-4.8h-4z" fill="#fff" />
+    <svg className={className} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ppt-grad" x1="4.494" y1="7.914" x2="13.832" y2="24.086" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#ca4c28" />
+          <stop offset="0.5" stopColor="#c5401e" />
+          <stop offset="1" stopColor="#b62f14" />
+        </linearGradient>
+      </defs>
+      <path d="M28.806 3H9.705A1.192 1.192 0 008.512 4.191V9.5l11.069 3.25L30 9.5V4.191A1.192 1.192 0 0028.806 3z" fill="#ff8f6b" />
+      <path d="M30 9.5H8.512V16l11.069 1.95L30 16z" fill="#ed6c47" />
+      <path d="M8.512 16v6.5l10.418 1.3L30 22.5V16z" fill="#d35230" />
+      <path d="M9.705 29h19.1A1.192 1.192 0 0030 27.809V22.5H8.512v5.309A1.192 1.192 0 009.705 29z" fill="#a8341a" />
+      <path d="M3.194 8.85h11.938a1.193 1.193 0 011.194 1.191v11.918a1.193 1.193 0 01-1.194 1.191H3.194A1.192 1.192 0 012 21.959V10.041A1.192 1.192 0 013.194 8.85z" fill="url(#ppt-grad)" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M5.9 12.1h4.05a3.1 3.1 0 010 6.2H7.9V20H5.9zM7.9 13.8v2.8h1.9a1.4 1.4 0 000-2.8z" fill="#ffffff" />
     </svg>
   )
 }
