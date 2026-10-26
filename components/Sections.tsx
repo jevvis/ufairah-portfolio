@@ -1458,13 +1458,6 @@ export function AwardsSection() {
 export function TrainingsSection() {
   const { t } = useLanguage()
   const [hoveredOrgId, setHoveredOrgId] = useState<number | null>(null)
-  const [bemActiveIdx, setBemActiveIdx] = useState(0)
-
-  const bemPhotos = [
-    '/projects/bem-pengmas.jpg',
-    '/projects/bem-viskam.jpg',
-    '/projects/bem-womantalk.jpg',
-  ]
 
   const organizations = [
     {
@@ -1540,112 +1533,28 @@ export function TrainingsSection() {
 
         {/* Content: Collage Grid (Left) + Organization Cards (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
-          {/* Left: Collage Grid (6 Photos connected to Organizations) */}
-          <div className="lg:col-span-5 grid grid-cols-3 gap-3 sm:gap-4 pr-0 lg:pr-4 sticky top-24 select-none">
-            {/* Kolom 1 */}
-            <div className="flex flex-col gap-3 sm:gap-4 -translate-y-4">
-              {/* Foto 1: Sertifikat kegiatan BEM UBL (orgId: 1) - Klik untuk ganti foto */}
-              <div
-                onMouseEnter={() => setHoveredOrgId(1)}
-                onMouseLeave={() => setHoveredOrgId(null)}
-                onClick={() => setBemActiveIdx((prev) => (prev + 1) % bemPhotos.length)}
-                className={`w-full aspect-[4/5] bg-[var(--card-bg)] rounded-2xl overflow-hidden border transition-all duration-500 cursor-pointer relative group ${getPhotoWrapperClass([1])}`}
-                title="Klik untuk berganti sertifikat kegiatan BEM UBL"
-              >
-                <img
-                  src={bemPhotos[bemActiveIdx]}
-                  alt="Sertifikat kegiatan BEM Universitas Borneo Lestari"
-                  className={`w-full h-full object-cover transition-all duration-500 ${getPhotoImageClass([1])}`}
-                />
-                <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/65 backdrop-blur-md border border-white/20 text-white text-[9px] font-medium flex items-center gap-1 shadow-md pointer-events-none">
-                  <span>{bemActiveIdx + 1}/3</span>
-                  <span className="opacity-60">•</span>
-                  <span>BEM UBL</span>
-                </div>
-              </div>
-
-              {/* Foto 2: Lambang Universitas Borneo Lestari (orgId: 2) */}
-              <div
-                onMouseEnter={() => setHoveredOrgId(2)}
-                onMouseLeave={() => setHoveredOrgId(null)}
-                className={`w-full aspect-square bg-[var(--card-bg)] rounded-2xl overflow-hidden border transition-all duration-500 cursor-pointer ${getPhotoWrapperClass([2])}`}
-                title="Lambang Universitas Borneo Lestari"
-              >
-                <img
-                  src="/projects/ubl-logo.png"
-                  alt="Lambang Universitas Borneo Lestari"
-                  className={`w-full h-full object-contain p-4 bg-white/5 transition-all duration-500 ${getPhotoImageClass([2])}`}
-                />
-              </div>
-            </div>
-
-            {/* Kolom 2 */}
-            <div className="flex flex-col gap-3 sm:gap-4 translate-y-3">
-              {/* Foto 3: Sertifikat Sosialisasi Stunting (orgId: 2) */}
-              <div
-                onMouseEnter={() => setHoveredOrgId(2)}
-                onMouseLeave={() => setHoveredOrgId(null)}
-                className={`w-full aspect-square bg-[var(--card-bg)] rounded-2xl overflow-hidden border transition-all duration-500 cursor-pointer ${getPhotoWrapperClass([2])}`}
-              >
-                <img
-                  src="/projects/stunting-sosialisasi.jpg"
-                  alt="Sertifikat Ketua Pelaksana Sosialisasi Pencegahan Stunting"
-                  className={`w-full h-full object-cover transition-all duration-500 ${getPhotoImageClass([2])}`}
-                />
-              </div>
-
-              {/* Foto 4: Sertifikat Visit Kampung (orgId: 1) */}
-              <div
-                onMouseEnter={() => setHoveredOrgId(1)}
-                onMouseLeave={() => setHoveredOrgId(null)}
-                onClick={() => { setBemActiveIdx(1); setHoveredOrgId(1); }}
-                className={`w-full aspect-[4/5] bg-[var(--card-bg)] rounded-2xl overflow-hidden border transition-all duration-500 cursor-pointer ${getPhotoWrapperClass([1])}`}
-                title="Sertifikat Koordinator Acara Visit Kampung"
-              >
-                <img
-                  src="/projects/bem-viskam.jpg"
-                  alt="Sertifikat Koordinator Acara Visit Kampung"
-                  className={`w-full h-full object-cover transition-all duration-500 ${getPhotoImageClass([1])}`}
-                />
-              </div>
-            </div>
-
-            {/* Kolom 3 */}
-            <div className="flex flex-col gap-3 sm:gap-4 -translate-y-6">
-              {/* Foto 5: Sertifikat Webinar Woman Talk (orgId: 1) */}
-              <div
-                onMouseEnter={() => setHoveredOrgId(1)}
-                onMouseLeave={() => setHoveredOrgId(null)}
-                onClick={() => { setBemActiveIdx(2); setHoveredOrgId(1); }}
-                className={`w-full aspect-[4/5] bg-[var(--card-bg)] rounded-2xl overflow-hidden border transition-all duration-500 cursor-pointer ${getPhotoWrapperClass([1])}`}
-                title="Sertifikat Koordinator Humas Webinar Woman Talk"
-              >
-                <img
-                  src="/projects/bem-womantalk.jpg"
-                  alt="Sertifikat Koordinator Humas Webinar Woman Talk"
-                  className={`w-full h-full object-cover transition-all duration-500 ${getPhotoImageClass([1])}`}
-                />
-              </div>
-
-              {/* Foto 6: Sertifikat Penanggung Jawab Pengabdian Masyarakat (orgId: 1) */}
-              <div
-                onMouseEnter={() => setHoveredOrgId(1)}
-                onMouseLeave={() => setHoveredOrgId(null)}
-                onClick={() => { setBemActiveIdx(0); setHoveredOrgId(1); }}
-                className={`w-full aspect-square bg-[var(--card-bg)] rounded-2xl overflow-hidden border transition-all duration-500 cursor-pointer ${getPhotoWrapperClass([1])}`}
-                title="Sertifikat Penanggung Jawab Pengabdian Masyarakat"
-              >
-                <img
-                  src="/projects/bem-pengmas.jpg"
-                  alt="Sertifikat Penanggung Jawab Pengabdian Masyarakat"
-                  className={`w-full h-full object-cover transition-all duration-500 ${getPhotoImageClass([1])}`}
-                />
+          {/* Kiri: satu foto besar BEM (menyorot saat kartu BEM disorot) */}
+          <div className="lg:col-span-6 lg:sticky lg:top-24 select-none">
+            <div
+              onMouseEnter={() => setHoveredOrgId(1)}
+              onMouseLeave={() => setHoveredOrgId(null)}
+              className={`relative w-full aspect-[16/10] bg-[var(--card-bg)] rounded-3xl overflow-hidden border transition-all duration-500 cursor-pointer ${getPhotoWrapperClass([1])}`}
+            >
+              <img
+                src="/projects/bem-ubl.jpg"
+                alt={t('org.1.inst')}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/85 via-black/45 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-5 right-5 text-white pointer-events-none">
+                <span className="text-[10px] uppercase tracking-widest text-emerald-300 font-semibold block mb-0.5 drop-shadow">{t('org.1.period')}</span>
+                <p className="text-sm md:text-base font-bold drop-shadow-md">{t('org.1.inst')}</p>
               </div>
             </div>
           </div>
 
           {/* Right: List of Organization Cards with Interactive Hover */}
-          <div className="lg:col-span-7 flex flex-col gap-4 font-sans">
+          <div className="lg:col-span-6 flex flex-col gap-4 font-sans">
             {organizations.map((item) => {
               const isSelected = hoveredOrgId === item.id
               return (
@@ -1746,36 +1655,6 @@ export function TrainingsSection() {
                       ))}
                     </div>
                   </div>
-
-                  {/* BEM UBL Certificates Preview Strip */}
-                  {item.id === 1 && (
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-4 pt-3 border-t border-[var(--card-border)]/40">
-                      <span className="text-[10px] text-[var(--muted)] font-semibold uppercase tracking-wider font-sans">
-                        Sertifikat Kegiatan BEM UBL (3):
-                      </span>
-                      <div className="flex items-center gap-2">
-                        {bemPhotos.map((img, i) => (
-                          <button
-                            key={i}
-                            type="button"
-                            onClick={(e) => {
-                              e.stopPropagation()
-                              setBemActiveIdx(i)
-                              setHoveredOrgId(1)
-                            }}
-                            className={`w-12 h-8 rounded-lg overflow-hidden border transition-all duration-300 ${
-                              bemActiveIdx === i
-                                ? 'border-emerald-500 ring-2 ring-emerald-500/50 scale-105 shadow-md'
-                                : 'border-[var(--card-border)] opacity-70 hover:opacity-100 hover:scale-105'
-                            }`}
-                            title={`Lihat sertifikat kegiatan BEM UBL ${i + 1}`}
-                          >
-                            <img src={img} alt={`Sertifikat kegiatan BEM UBL ${i + 1}`} className="w-full h-full object-cover" />
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               )
             })}
