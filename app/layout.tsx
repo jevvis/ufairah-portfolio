@@ -45,6 +45,11 @@ export default function RootLayout({
                     document.documentElement.classList.remove('dark');
                   }
                 } catch(e) {}
+                try {
+                  if (sessionStorage.getItem('intro-seen')) {
+                    document.documentElement.classList.add('intro-done', 'hero-go');
+                  }
+                } catch(e) {}
               })();
             `,
           }}

@@ -12,10 +12,12 @@ import {
 } from '@/components/Sections'
 import Contact from '@/components/Contact'
 import FadeInSection from '@/components/FadeInSection'
+import Intro from '@/components/Intro'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <Intro />
       <Navbar />
       <Hero />
       <FadeInSection>
